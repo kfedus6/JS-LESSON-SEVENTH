@@ -155,4 +155,3 @@ let namesArray = (n) => {
 }
 namesArray(names);
 
-
