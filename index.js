@@ -135,21 +135,21 @@ console.log(Array.isArray("qwe"));
 let letters = ["Б", "В", "Г", "Д", "Ж", "З", "Й", "К", "Л", "М", "Н", "П", "Р", "С", "Т", "Ф", "Х", "Ц", "Ч", "Ш", "Щ"]
 
 let names = "Егор, Аня, Ян, Кирил, Ярик, Дима";
-//let names = ["Егор", "Аня", "Ян", "Кирил", "Ярик", "Дима"];
 
 let namesArray = (n) => {
-   let arr = n.split(", ")
+   let arr = n.split(" ")
 
    console.log(arr);
 
    arr.forEach((item, index) => {
       for (l of letters) {
-         if (item[0] === l) {
+         if (item[0] == l) {
             arr.splice(index, index);
          }
       }
    })
    console.log(arr);
+
 
 
 }
