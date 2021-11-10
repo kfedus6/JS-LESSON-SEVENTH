@@ -132,26 +132,33 @@ console.log(Array.isArray("qwe"));
 */
 //============== ДЗ============\\
 
-let letters = ["Б", "В", "Г", "Д", "Ж", "З", "Й", "К", "Л", "М", "Н", "П", "Р", "С", "Т", "Ф", "Х", "Ц", "Ч", "Ш", "Щ"]
+//let letters = ["Б", "В", "Г", "Д", "Ж", "З", "Й", "К", "Л", "М", "Н", "П", "Р", "С", "Т", "Ф", "Х", "Ц", "Ч", "Ш", "Щ"]
 
 let names = "Егор, Аня, Ян, Кирил, Ярик, Дима";
 
-let namesArray = (n) => {
-   let arr = n.split(" ")
+let namesArray = (arr) => {
 
-   console.log(arr);
+   let result = arr.split(", ");
+   console.log(result);
 
-   arr.forEach((item, index) => {
-      for (l of letters) {
-         if (item[0] == l) {
-            arr.splice(index, index);
-         }
+   let result_Two = result.filter(item =>
+      item[0] === "А" || item[0] === "Е" || item[0] === "Ё" ||
+      item[0] === "И" || item[0] === "О" || item[0] === "У" ||
+      item[0] === "Ю" || item[0] === "Я"
+   );
+   console.log(result_Two);
+
+   let result_Tree = result_Two.filter((num) => {
+      if (num.length >= 4) {
+         return num;
+
       }
    })
-   console.log(arr);
+   console.log(result_Tree);
 
+   result_Tree.forEach(len => console.log(len + ": " + len.length));
 
-
+   console.log(result_Tree.sort().reverse().join(", "));
 }
-namesArray(names);
 
+namesArray(names);
