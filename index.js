@@ -265,58 +265,63 @@ console.log(text.slice(1))
 
 //================= ДЗ ==================\\
 //1)
-// let date = '2025-12-31';
-// let d = date.split('-').reverse().join('.');
-//console.log(d);
+let date = '2025-12-31';
+let d = date.split('-').reverse().join('.');
+console.log(d);
 //2)
-// function words() {
-//    let word = [];
-//    return function () {
-//       for (let i = 0; i < 5; i++) {
-//          word[i] = prompt();
-//       }
-//       console.log(word.join('/'));
-//    }
-// }
-//words()();
+
+function words() {
+   let word = [];
+   return function () {
+      for (let i = 0; i < 5; i++) {
+         word[i] = prompt();
+      }
+      console.log(word.join('/'));
+   }
+}
+words()();
 //3)
-//let abc = 'aaa bbb ccc';
-// let result = abc.slice(3, 7);
-// console.log(result);
-// let result_Two = abc.substring(3, 7);
-// console.log(result_Two);
-// let result_Tree = abc.substr(3, 4);
-// console.log(result_Tree);
 
-// let del = (str) => {
-//    let res = str.split(' ');
-//    res.forEach((item, index) => {
-//       if (item.includes('bbb') == true) {
-//          res.splice(index, index);
-//       }
-//    })
-//    console.log(res.join(' '));
-// }
+let abc = 'aaa bbb ccc';
 
-// del(abc);
+let del = (str) => {
+   let res = str.split(' ');
+   res.forEach((item, index) => {
+      if (item.includes('bbb') == true) {
+         res.splice(index, index);
+      }
+   })
+   console.log(res.join(' '));
+}
 
-// let b = abc.slice(0, 3) + abc.slice(7);
-// console.log(b);
+del(abc);
 
-// abc = abc[0] + abc[1] + abc[2] + abc[7] + abc[8] + abc[9] + abc[10];
-// console.log(abc);
+let b = abc.slice(0, 3) + abc.slice(7);
+console.log(b);
+
+abc = abc[0] + abc[1] + abc[2] + abc[7] + abc[8] + abc[9] + abc[10];
+console.log(abc);
 //4)
-// let string = prompt();
-// let upper = (u) => {
-//    return u
-//       .split(' ')
-//       .map(item => item[0].toUpperCase() + item.slice(1))
-//       .join(' ')
-// }
-// console.log(upper(string));
+
+let string = prompt();
+let upper = (u) => {
+   return u
+      .split(' ')
+      .map(item => item[0].toUpperCase() + item.slice(1))
+      .join(' ')
+}
+console.log(upper(string));
 //5)
-// let delete_characters = (str, length) => {
-//    str = str.substring(str, length);
-//    console.log(str);
-// }
-// delete_characters('Каждый охотник желает знать', 7);
+
+let delete_characters = (str, length) => {
+   str = str.substring(str, length);
+   console.log(str);
+}
+delete_characters('Каждый охотник желает знать', 7);
+//6)
+
+let comparison = (str1, str2) => {
+   let res = str1.toUpperCase() === str2.toUpperCase();
+   return res;
+}
+console.log(comparison('string', 'StRiNg'));
