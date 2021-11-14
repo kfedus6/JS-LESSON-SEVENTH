@@ -134,11 +134,12 @@ console.log(Array.isArray("qwe"));
 
 //let letters = ["Б", "В", "Г", "Д", "Ж", "З", "Й", "К", "Л", "М", "Н", "П", "Р", "С", "Т", "Ф", "Х", "Ц", "Ч", "Ш", "Щ"]
 
+/*
 let names = "Егор, Аня, Ян, Кирил, Ярик, Дима";
 
 let namesArray = (arr) => {
 
-   let result = arr.split(", ");
+   let result = arr.split(" ");
    console.log(result);
 
    let result_Two = result.filter(item =>
@@ -161,4 +162,161 @@ let namesArray = (arr) => {
    console.log(result_Tree.sort().reverse().join(", "));
 }
 
-namesArray(names);
+namesArray(prompt());
+*/
+
+/*
+class Comanda {
+   constructor(name, members) {
+      this.name = name;
+      this.members = members;
+   }
+   add()
+   delete()
+   sort()
+   print()
+   lenth()
+}
+
+let chelsea = new Comanda("chelsea", ["grogba", "lamperd", "treyy"]);
+console.log(chelsea);
+*/
+
+/*
+class Comanda extends Array {
+   constructor(name, ...members) {
+      super(...members);
+      this.name = name;
+   }
+   push(name) {
+      let x = parseInt(name)
+      console.log(x)
+      if (isNaN(x) == true) {
+         super.push(name.toUpperCase());
+      }
+   }
+}
+
+let chelsea = new Comanda("chelsea", "grogba", "lamperd", "andrey", "treyy");
+chelsea.sort();
+chelsea.push("messi");
+chelsea.push("1231");
+console.log(chelsea);
+*/
+
+
+//let x = 10;
+//'qweqwe',"qweqwe",`${x}qeqweq`;
+
+/*
+let x1 = '2'
+let x2 = '2'
+let x3 = '2'
+
+console.log(x1 + x2 - x3)
+*/
+
+/*
+let text = "\thello\nworld"
+console.log(text)
+*/
+/*
+console.log('hello world'.length)
+
+for (let item of 'bad') {
+   console.log(item);
+}
+*/
+/*
+let text = 'hello';
+text = 'd' + text[1] + text[2] + text[3] + text[4];
+console.log(text.toUpperCase());
+console.log(text.includes('llh'));
+console.log(text.startsWith('e', 2));
+console.log(text.endsWith('e', 2));
+*/
+/*
+let name = "kolya";
+let nameTwo = name.slice(-1, 3);
+console.log(nameTwo)
+nameTwo = name.substring(-1, 3);
+console.log(nameTwo)
+nameTwo = name.substr(-1, 3);
+console.log(nameTwo)
+*/
+/*
+function word(x) {
+   return x[0].toUpperCase() + x.slice(1)
+}
+console.log(word("hello"))
+*/
+//xxx qqq sss zzz
+/*
+function texts(x) {
+   return x.includes('xxx') || x.includes('qqq') || x.includes('sss') || x.includes('zzz')
+}
+
+console.log(texts("jnjnkgjdnfkjgndkfjdxxdnaskjdnaks"))
+*/
+/*
+text = '$120';
+console.log(text.slice(1))
+*/
+
+//================= ДЗ ==================\\
+//1)
+// let date = '2025-12-31';
+// let d = date.split('-').reverse().join('.');
+//console.log(d);
+//2)
+// function words() {
+//    let word = [];
+//    return function () {
+//       for (let i = 0; i < 5; i++) {
+//          word[i] = prompt();
+//       }
+//       console.log(word.join('/'));
+//    }
+// }
+//words()();
+//3)
+//let abc = 'aaa bbb ccc';
+// let result = abc.slice(3, 7);
+// console.log(result);
+// let result_Two = abc.substring(3, 7);
+// console.log(result_Two);
+// let result_Tree = abc.substr(3, 4);
+// console.log(result_Tree);
+
+// let del = (str) => {
+//    let res = str.split(' ');
+//    res.forEach((item, index) => {
+//       if (item.includes('bbb') == true) {
+//          res.splice(index, index);
+//       }
+//    })
+//    console.log(res.join(' '));
+// }
+
+// del(abc);
+
+// let b = abc.slice(0, 3) + abc.slice(7);
+// console.log(b);
+
+// abc = abc[0] + abc[1] + abc[2] + abc[7] + abc[8] + abc[9] + abc[10];
+// console.log(abc);
+//4)
+// let string = prompt();
+// let upper = (u) => {
+//    return u
+//       .split(' ')
+//       .map(item => item[0].toUpperCase() + item.slice(1))
+//       .join(' ')
+// }
+// console.log(upper(string));
+//5)
+// let delete_characters = (str, length) => {
+//    str = str.substring(str, length);
+//    console.log(str);
+// }
+// delete_characters('Каждый охотник желает знать', 7);
