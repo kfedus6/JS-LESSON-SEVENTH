@@ -264,6 +264,7 @@ console.log(text.slice(1))
 */
 
 //================= ДЗ ==================\\
+/*
 //1)
 let date = '2025-12-31';
 let d = date.split('-').reverse().join('.');
@@ -325,3 +326,96 @@ let comparison = (str1, str2) => {
    return res;
 }
 console.log(comparison('string', 'StRiNg'));
+*/
+
+//Регулярные выражение
+
+/*
+let text = 'heLLo';
+
+//let reg = new RegExp('hello', 'i'); //1)Шаблон,2)Флаг
+let reg = /hello/i;
+
+console.log(reg.test(text))
+*/
+
+/*
+let text = 'Hello ! Dima. - hello Yakir';
+let reg = /hello/ig;
+console.log(text.match(reg));
+console.log(text.replace('hello', "goodbuy"));
+console.log(text.replace(reg, "goodbuy"));
+*/
+
+/*
+let text = prompt();
+let reg = /marina/ig;
+console.log(text.match(reg).length);
+*/
+
+/*
+let text = 'helLo world';
+let reg = /hello/i;
+console.log(reg.test(text))
+*/
+
+/*
+let number = '+38 (066) 057-02-13';
+let reg = /\d/g
+console.log(number.match(reg).join(''));
+*/
+// \d - цифры \s - пробел \w
+
+/*
+let text = "I love HTML5";
+//let reg = /html5/ig;
+let reg = /\s\w\w\w\w\d/
+console.log(text.match(reg));
+*/
+
+/*
+let text = "Что может быть лучше чем CCS3 ? meybe JS"
+let reg = /\s\w\w\w\d/i;
+console.log(text.match(reg));
+*/
+
+//\D \S \W Не
+
+/*
+let text = "nb1231n kjdfj d123  knsfd jsnkj23 1ds nfsk";
+let reg = /\S/g
+console.log(text.match(reg).join(''));
+*/
+
+/*
+let number = '+38 (066) 057-02-13';
+let reg = /\D/g;
+console.log(number.replace(reg, ""));
+*/
+
+//let text = "hello world my Hello";
+//console.log(text.replace("Hello", "goodLuck"))
+
+//let text = 'HTML ';
+//let reg = /HTML./;
+//console.log(reg.test(text));
+
+
+//   ^    $
+
+/*
+let text = "now my best time";
+let reg = /best time$/
+let reg_two = /^now\s/;
+console.log(reg_two.test(text));
+*/
+
+//12:31,11:54,
+//let text = "13-24";
+//let reg = /^\d\d.\d\d$/;
+//console.log(reg.test(text));
+/*
+let text = ''
+let reg = /^$/
+console.log(reg.test(text));
+*/
