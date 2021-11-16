@@ -419,3 +419,18 @@ let text = ''
 let reg = /^$/
 console.log(reg.test(text));
 */
+//================ ДЗ ===============\\
+let text = 'hello 25';
+let regFun = (str) => {
+   let reg = /^\d+$/;
+   let reg_Two = /^\D+$/;
+   let reg_Tree = /^.+\w+.+$/;
+   if (reg.test(str) == true) {
+      console.log(`Numbers: ${str.match(reg).join('')}`);
+   } else if (reg_Two.test(str) == true) {
+      console.log(`String: ${str.match(reg_Two).join('')}`)
+   } else if (reg_Tree.test(str) == true) {
+      console.log(str.match(reg_Tree));
+   }
+}
+regFun(text);
