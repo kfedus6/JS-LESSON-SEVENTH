@@ -420,7 +420,8 @@ let reg = /^$/
 console.log(reg.test(text));
 */
 //================ ДЗ ===============\\
-let text = 'hello 25';
+/*
+let text = prompt();
 let regFun = (str) => {
    let reg = /^\d+$/;
    let reg_Two = /^\D+$/;
@@ -434,3 +435,81 @@ let regFun = (str) => {
    }
 }
 regFun(text);
+*/
+/*
+let text = `1 - сходить в кино
+2 - посмотреть кино
+3 - выйти из кино
+`;
+let reg = /^\d/gm;
+*/
+
+/*
+let text = `
+Понедельник: 1 день недели
+Вторник 2
+Среда 3
+`
+let reg = /\d$/gm;
+*/
+
+/*
+let text = `
+Понедельник: 1
+Вторник 2
+Среда 3
+`
+let reg = /\d\n/g;
+*/
+
+//console.log(text.match(reg));
+
+//\b
+
+/*
+let text = "The best ! JavaScript!";
+let reg = /\bJavaScript\b/
+console.log(text.match(reg));
+*/
+
+/*
+let text = "Ох черт, завтра в 12:00, мне будет 26. но не 123или62. 123:321((("
+let reg = /\b\d\d.\d\d\b/;
+console.log(text.match(reg))
+*/
+
+/*
+let text = "ЗП s1000$ dsad"
+let reg = /\.\d\d\d\d\$/g;
+console.log(text.match(reg))
+*/
+
+/*
+let text = "Глава 5.1";
+let reg = /\d\.\d/;
+console.log(text.match(reg));
+*/
+/*
+let text = "коп хоп тоП бОп роб";
+let reg = /[хтбрк]оп/ig;
+console.log(text.match(reg));
+*/
+//\d = [0-9]
+//\w = [a-zA-Z0-9]
+//\s = [\n\t\v\f\r]
+
+/*
+let text = " 18, 20, 14, 45, 37, 49,";
+let reg = /[0-2][0-9]/g;
+console.log(text.match(reg));
+*/
+
+//=====================ДЗ===============\\
+let p = "Пример: 1+4-3+15";
+let reg = /[+-]/g;
+console.log(p.match(reg))
+
+
+let text = "Завтрак в 09:00. Ужин в 21W30";
+let reg = /\b\d\d.\d\d\b/g;
+console.log(text.match(reg))
