@@ -423,15 +423,20 @@ console.log(reg.test(text));
 /*
 let text = prompt();
 let regFun = (str) => {
+   let arr = [];
    let reg = /^\d+$/;
    let reg_Two = /^\D+$/;
    let reg_Tree = /^.+\w+.+$/;
+   let regNumbet = /\d+/gm;
+   let regString = /[a-z]+/gim;
    if (reg.test(str) == true) {
       console.log(`Numbers: ${str.match(reg).join('')}`);
    } else if (reg_Two.test(str) == true) {
       console.log(`String: ${str.match(reg_Two).join('')}`)
    } else if (reg_Tree.test(str) == true) {
-      console.log(str.match(reg_Tree));
+      arr.push(str.match(regNumbet));
+      arr.push(str.match(regString));
+      console.log(arr);
    }
 }
 regFun(text);
@@ -505,11 +510,14 @@ console.log(text.match(reg));
 */
 
 //=====================ДЗ===============\\
-let p = "Пример: 1+4-3+15";
-let reg = /[+-]/g;
-console.log(p.match(reg))
 
+// let p = "Пример: 1+4-3+15";
+// let reg = /\d+.\d+/;
+// let reg_two = /\d+.\d+$/;
 
-let text = "Завтрак в 09:00. Ужин в 21W30";
-let reg = /\b\d\d.\d\d\b/g;
-console.log(text.match(reg))
+/*
+let text = "Завтрак в 09:00. Ужин в 21-30";
+let reg = /(\d+)\-(\d+)/g;
+console.log(text.match(reg));
+*/
+
