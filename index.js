@@ -512,12 +512,13 @@ console.log(text.match(reg));
 //=====================ДЗ===============\\
 
 // let p = "Пример: 1+4-3+15";
-// let reg = /\d+.\d+/;
-// let reg_two = /\d+.\d+$/;
+// let reg = /\d([-+])\d/;
+// console.log(p.match(reg));
+
 
 /*
 let text = "Завтрак в 09:00. Ужин в 21-30";
-let reg = /(\d+)\-(\d+)/g;
+let reg = /\b\d\d[:-]\d\d\b/g;
 console.log(text.match(reg));
 */
 
