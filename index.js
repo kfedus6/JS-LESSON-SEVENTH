@@ -511,14 +511,69 @@ console.log(text.match(reg));
 
 //=====================ДЗ===============\\
 
-// let p = "Пример: 1+4-3+15";
-// let reg = /\d([-+])\d/;
-// console.log(p.match(reg));
+/*
+let p = "Пример: 7-3+5";
+let reg = /\d/g;
+let regOne = /[+-]/g;
+let numbers = p.match(reg);
+let znaks = p.match(regOne);
 
+console.log(znaks)
+
+
+res = 0
+for (let i = 0; i < numbers.length; i++) {
+   if (i == 0) {
+      if (znaks[i] == '+') {
+         res += parseInt(numbers[i]) + parseInt(numbers[i + 2])
+      }
+      else {
+         res -= parseInt(numbers[i]) - parseInt(numbers[i + 2])
+      }
+   }
+   else if (i + 1 == numbers.length) {
+      if (znaks[i - 1] == "+") {
+         console.log(numbers[i])
+         console.log(res)
+         res += parseInt(numbers[i])
+      }
+      if (znaks[i - 1] == "-") {
+         res -= parseInt(numbers[i])
+      }
+   }
+}
+console.log(res)
+*/
 
 /*
 let text = "Завтрак в 09:00. Ужин в 21-30";
 let reg = /\b\d\d[:-]\d\d\b/g;
 console.log(text.match(reg));
 */
+/*
+let p = "Пример: 15/2*2+100";
+text = p.split(" ");
+console.log(text)
+res = eval(text[1])
+console.log(res)
+*/
 
+/*
+let text = 'Hello this "day" my "best" day.';
+
+//let reg = /".+?"/g
+let reg = /"[^"]+"/g
+console.log(text.match(reg))
+*/
+
+/*
+let text = '<a href="#">TEST</a>'
+let reg = /<.+>/g
+console.log(text.match(reg));
+*/
+
+/*
+let text = 'youtube.com ru.youtube.com'
+let reg = /(\w+\.)+\w+/g
+console.log(text.match(reg))
+*/
