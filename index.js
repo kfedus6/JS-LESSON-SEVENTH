@@ -577,3 +577,11 @@ let text = 'youtube.com ru.youtube.com'
 let reg = /(\w+\.)+\w+/g
 console.log(text.match(reg))
 */
+//=============== ДЗ ============\\
+
+let text = 'Всем привет ! Сегодня я решал пример "3*2/3" а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! "5 * 5 - 5" в ходе такого вычисленияя получил 20, а после сделал "3 - 2"  и не смог решить!!!'
+let reg = /"[^"]+"/g;
+let result = text.match(reg);
+console.log(result);
+let sum = eval(result[1]);
+console.log(sum);
