@@ -578,10 +578,26 @@ let reg = /(\w+\.)+\w+/g
 console.log(text.match(reg))
 */
 //=============== ДЗ ============\\
-
+/*
 let text = 'Всем привет ! Сегодня я решал пример "3*2/3" а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! "5 * 5 - 5" в ходе такого вычисленияя получил 20, а после сделал "3 - 2"  и не смог решить!!!'
-let reg = /"[^"]+"/g;
+let reg = /\"\d+.+?\"/g;
 let result = text.match(reg);
 console.log(result);
-let sum = eval(result[1]);
-console.log(sum);
+*/
+
+
+let text = 'Всем привет ! Сегодня я решал пример (3*2/3) а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! (5 * 5 - 5) в ходе такого вычисленияя получил 20, а после сделал (3 - 2)  и не смог решить!!!'
+let reg = /\(.+?\)/g;
+let result = text.match(reg);
+console.log(result);
+
+let resultSum = (arr) => {
+   let sum = [];
+   arr.forEach((item,) => {
+      sum.push(eval(item));
+   })
+   sum.sort((a, b) => a - b);
+   sum.forEach(item => console.log(`Результат выполнения: ${item}`));
+   console.log(`Найдено было ${arr.length} примера.`)
+}
+resultSum(result);
