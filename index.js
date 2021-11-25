@@ -585,11 +585,12 @@ let result = text.match(reg);
 console.log(result);
 */
 
-
-let text = 'Всем привет ! Сегодня я решал пример (3*2/3) а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! (5 * 5 - 5) в ходе такого вычисленияя получил 20, а после сделал (3 - 2)  и не смог решить!!!'
-let reg = /\(.+?\)/g;
+/*
+let text = 'Всем привет ! Сегодня я решал пример "3*2/3" а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! "5 * 5 - 5" в ходе такого вычисленияя получил 20, а после сделал "3 - 2"  и не смог решить!!!'
+let reg = /"[^"]+"/g;
 let result = text.match(reg);
-console.log(result);
+
+console.log(result)
 
 let resultSum = (arr) => {
    let sum = [];
@@ -601,3 +602,91 @@ let resultSum = (arr) => {
    console.log(`Найдено было ${arr.length} примера.`)
 }
 resultSum(result);
+*/
+
+/*
+let s = "Мне 30123 лет ! 131 Внимание ! Не 12";
+let reg = /\d{3,}/g
+console.log(s.match(reg));
+*/
+
+
+//let s = "+38(066)53-21-1";
+
+//38,066,53,21,1
+
+/*
+let reg = /\d{1,}/g;
+console.log(s.match(reg));
+*/
+
+//color colour
+
+/*
+let s = "Мне писать color или colour ?"
+
+let reg = /colou?r/g
+
+console.log(s.match(reg));
+*/
+
+/*
+let s = '1 2 31.12 312 12.31231 111.11';
+
+let reg = /\d+\.\d+/g;
+console.log(s.match(reg));
+
+*/
+
+/*
+let s = '<h1>weqeq</h1>eqwewq<h2>sadasda</h2><h3>dasdas</h3>';
+
+let reg = /<h[1-6]*>/gi;
+console.log(s.match(reg));
+*/
+
+// () //arr.    (h[0-9])+ 
+
+/*
+let s = 'gogogo run !';
+
+let reg = /(go)+/
+
+console.log(s.match(reg))
+*/
+
+//let s = 'test@gmail.com .com @ @com . . . test-two@mail.ua';
+
+//let reg = /[-.\w]+@([\w-]+\.)+\w+/g;
+//console.log(s.match(reg));
+
+/*
+let s = '<span class="test">text</span>';
+
+let r = /<(([a-z]+)\s*([^>]*))>/
+
+let res = s.match(r);
+
+console.log(res[0]);
+console.log(res[2]);
+console.log(res[3]);
+
+*/
+
+/*
+let date = '2021-11-25';
+//let reg = /(\d+)+/g;
+let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+console.log(date)
+res = date.match(reg).groups;
+date = date.replace(reg, '$<day>-$<month>-$<year>')
+console.log(date)
+*/
+
+/*
+let s = 'Daniil Titov';
+let reg = /(?<name>\w+)\s(?<surename>\w+)/gi;
+let result = s.match(reg).groups;
+result = s.replace(reg, '$<surename> $<name>');
+console.log(result);
+*/
