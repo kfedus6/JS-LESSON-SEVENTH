@@ -586,8 +586,8 @@ console.log(result);
 */
 
 /*
-let text = 'Всем привет ! Сегодня я решал пример "3*2/3" а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! "5 * 5 - 5" в ходе такого вычисленияя получил 20, а после сделал "3 - 2"  и не смог решить!!!'
-let reg = /"[^"]+"/g;
+let text = 'Всем привет ! Сегодня я решал пример (3*2/3) а после этого получил ответ 2. Мне не понравилось и я решил изменить пример! (5 * 5 - 5) в ходе такого вычисленияя получил 20, а после сделал (3 - 2) и не смог решить!!!'
+let reg = /\((.+?)\)/g;
 let result = text.match(reg);
 
 console.log(result)
@@ -679,14 +679,24 @@ let date = '2021-11-25';
 let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
 console.log(date)
 res = date.match(reg).groups;
+console.log(res);
 date = date.replace(reg, '$<day>-$<month>-$<year>')
-console.log(date)
+console.log(date);
 */
-
 /*
 let s = 'Daniil Titov';
 let reg = /(?<name>\w+)\s(?<surename>\w+)/gi;
 let result = s.match(reg).groups;
 result = s.replace(reg, '$<surename> $<name>');
 console.log(result);
+*/
+//=================== дз ============\\
+/*
+let text = '(Name: Dima Marks = [4,2,1,2]),(Name: Egor Marks = [4,2,5,5]),(Name: Kirill Marks = [2,4,1,2])';
+let reg = /\s[a-z]+\s/gi;
+let reg_Num = /\[\d\,\d\,\d\,\d\]/g;
+let result = text.match(reg);
+let result_Num = text.match(reg_Num);
+console.log(result);
+console.log(result_Num);
 */
