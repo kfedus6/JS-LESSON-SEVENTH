@@ -694,9 +694,120 @@ console.log(result);
 /*
 let text = '(Name: Dima Marks = [4,2,1,2]),(Name: Egor Marks = [4,2,5,5]),(Name: Kirill Marks = [2,4,1,2])';
 let reg = /\s[a-z]+\s/gi;
-let reg_Num = /\[\d\,\d\,\d\,\d\]/g;
+let reg_Num = /\d\,\d\,\d\,\d/g;
 let result = text.match(reg);
 let result_Num = text.match(reg_Num);
 console.log(result);
 console.log(result_Num);
+
+let arr = [];
+arr.push([result[0]]);
+arr[0].push(result_Num[1]);
+arr.push([result[1]]);
+arr[1].push(result_Num[1]);
+arr.push([result[2]]);
+arr[2].push(result_Num[2]);
+console.log(arr);
+
+let num = [];
+num.push(result_Num[0]);
+console.log(num);
+*/
+
+//let date = new Date("27 March 2012");
+//let date = new Date(2012, 11, 25, 18, 30, 20, 10)
+//console.log(date.getFullYear())
+
+/*
+"""
+
+let date = new Date();
+//console.log(date)
+let year = date.getFullYear();
+let month = date.getMonth();
+let day = date.getDay();
+let date_Two = date.getDate();
+
+let day_Two = [
+   "понедылок", "вивторок", "середа", "четвер", "пятниця", "субота", "неділя",
+];
+
+let month_Two = [
+   "січень", "лютий", "березень", "квітень", "жовтень", "червень", "липень", "серпень", "вересень", "жовтень", "листопад", "грудень",
+];
+console.log(`Сегодня: ${date_Two} число, месяц: ${month_Two[month]}, год: ${year}, день недели: ${day_Two[day - 1]}`)
+//Сегодня: 27 число, месяц: август, год: 2021, день недели: Суббота
+
+
+let res = Math.PI
+console.log(res)
+
+res = Math.max(5, 2, 1, 3, 5, 3, 2, 15, 2)
+console.log(res)
+
+res = Math.pow(4, 2);
+console.log(res)
+
+
+res = Math.sqrt(121)
+console.log(res)
+
+
+let z = 14;
+let x = new Number('3123');
+
+
+Number.parseFloat()
+
+parseInt
+parseFloat
+
+isNaN
+"""
+*/
+
+/*
+
+EvalError: представляет ошибку, которая генерируется при выполнении глобальной функции eval()
+
+RangeError: ошибка генерируется, если параметр или переменная, представляют число, которое находится вне некотоого допустимого диапазона
+
+ReferenceError: ошибка генерируется при обращении к несуществующей ссылке
+
+SyntaxError: представляет ошибку синтаксиса
+
+TypeError: ошибка генерируется, если значение переменной или параметра представляют некорректный тип или пр попытке изменить значение, которое нельзя изменять
+
+URIError: ошибка генерируется при передаче функциям encodeURI() и decodeURI() некорректных значений
+
+AggregateError: предоставляет ошибку, которая объединяет несколько возникших ошибок
+*/
+
+/*
+try {
+   let arr = [4, 2]
+   let s = `Idx диапозон: 0 до ${arr.length}}`
+   let x = Number(prompt(s))
+   if (x < 0 || x > arr.length) throw new RangeError("Вы указали неверное значение")
+   console.log(arr[x])
+}
+catch (error) {
+   console.log("Получили ошибку")
+   console.log(error)
+}
+finally {
+   console.log("Проверка на ошибки закончина")
+}
+*/
+/*
+try {
+   n1 = 6
+   n2 = 0
+   let res = n1 / n2
+   if (res == Infinity) throw ("пытались дилить на 0");
+
+}
+catch (error) {
+   console.log(error)
+}
 */
