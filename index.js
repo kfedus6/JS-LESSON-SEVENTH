@@ -719,8 +719,6 @@ console.log(num);
 //console.log(date.getFullYear())
 
 /*
-"""
-
 let date = new Date();
 //console.log(date)
 let year = date.getFullYear();
@@ -735,10 +733,10 @@ let day_Two = [
 let month_Two = [
    "січень", "лютий", "березень", "квітень", "жовтень", "червень", "липень", "серпень", "вересень", "жовтень", "листопад", "грудень",
 ];
-console.log(`Сегодня: ${date_Two} число, месяц: ${month_Two[month]}, год: ${year}, день недели: ${day_Two[day - 1]}`)
+console.log(`Сегодня: ${date_Two} число, месяц: ${month_Two[month]}, год: ${year}, день недели: ${day_Two[day]}`)
 //Сегодня: 27 число, месяц: август, год: 2021, день недели: Суббота
-
-
+*/
+/*
 let res = Math.PI
 console.log(res)
 
@@ -809,5 +807,121 @@ try {
 }
 catch (error) {
    console.log(error)
+}
+*/
+//=============дз===========\\
+/*
+const date = new Date();
+const hour = date.getHours();
+const minute = date.getMinutes();
+const time = date.toTimeString();
+
+const day = date.getDay();
+const days = ['Воскресеные', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+
+const month = date.getMonth();
+const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+const year = date.getFullYear();
+
+const time_Fun = () => {
+   if (time > '06:00:00' && time < '12:00:00') {
+      console.log('Утро');
+   } else if (time > '12:00:00' && time < '18:00:00') {
+      console.log('День')
+   } else if (time > '18:00:00' && time < '24:00:00') {
+      console.log('Вечер')
+   } else if (time > '24:00:00' && time < '06:00:00') {
+      console.log('Ночь');
+   }
+}
+
+console.log('1 - Посмотреть время');
+console.log('2 - Посмотреть день');
+console.log('3 - Посмотреть месяц');
+console.log('4 - Посмотреть год');
+console.log('5 - Узнать время суток');
+console.log('6 - Выйти');
+
+let exit = false;
+
+while (!exit) {
+   let menu = +prompt('Меню');
+   switch (menu) {
+      case 1:
+         console.log(hour + ':' + minute);
+         break;
+      case 2:
+         console.log(days[day]);
+         break;
+      case 3:
+         console.log(months[month]);
+         break;
+      case 4:
+         console.log(year);
+         break;
+      case 5:
+         time_Fun();
+         break;
+      case 6:
+         exit = true;
+         console.log('Вы вышли')
+         break;
+   }
+}
+*/
+/*
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+let myDate = new Date();
+let today = myDate.getDate();
+
+let date_foo = () => {
+   for (item of events) {
+      if (item.Date >= today && item.Date <= today + 3)
+         console.log(item);
+   }
+}
+
+console.log('1 - Добавить событие');
+console.log('2 - Посмотреть события на сегодня');
+console.log('3 - Посмотреть события на ближайшие 3 дня');
+console.log('4 - Удалить события');
+console.log('5 - Выйти');
+
+let events = [''];
+
+let exit = false;
+while (!exit) {
+   let menu = +prompt('Меню');
+   switch (menu) {
+      case 1:
+         let year = myDate.getFullYear();
+         let month = myDate.getMonth();
+         let date = +prompt('Дата', 0);
+         let event = prompt('Событие');
+         events[events.length] = { Year: year, Month: months[month], Date: date, Event: event };
+         break;
+      case 2:
+         for (item of events) {
+            console.log(item);
+         }
+         break;
+      case 3:
+         date_foo();
+         break;
+      case 4:
+         let date_del = +prompt('выберите дату для удаление событие');
+         events.forEach((item, index) => {
+            if (item.Date === date_del) {
+               events.splice(index, index - 1);
+            }
+         })
+         break;
+      case 5:
+         exit = true;
+         console.log('Вы вышли');
+         break;
+   }
 }
 */
